@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chess</title>
+    <link rel="stylesheet" href="css/chessboard-1.0.0.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/chessboard-1.0.0.js"></script>
+</head><!--p Chess AI demonstration-->
+<body onload="loadSlider()">
+<div id="board-container">
+    <div id="header"><p>Load PGN:</p><input id="loadpgn" width="100%"></div>
+    <div id="board1"></div>
+    <div class="controlcontainer"><input class="slider" type="range" min="1" max="100" value="100" id="myRange">
+        <button type="button" onclick="onPressBack()"><</button>
+        <button type="button" onclick="onPressPause()">||</button>
+        <button type="button" onclick="onPressForward()">></button>
+    </div>
+    <div id="footer"><label>Status:
+        <div id="status"></div>
+    </label><label>FEN:</label>
+        <div id="fen"></div>
+        <label>PGN:</label>
+        <div id="pgn"></div>
+    </div>
+</div>
+</body>
+<script src="./js/agent_controller.js"></script>
+</html>

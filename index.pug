@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title= "Chess"
+        link(rel="stylesheet" href="css/chessboard-1.0.0.css")
+        link(rel='stylesheet', href='css/style.css')
+        script(src="./js/chessboard-1.0.0.js")
+
+    //p Chess AI demonstration
+    body(onload = "loadSlider()")
+        div#board-container
+            div#header
+                p Load PGN:
+                input#loadpgn(width="100%")
+
+            div#board1
+            div.controlcontainer
+                input(type="range" min="1" max="100" value="100" class="slider" id="myRange")
+                button(type="button" onclick="onPressBack()") <
+                button(type="button" onclick="onPressPause()") ||
+                button(type="button" onclick="onPressForward()") >
+
+            div#footer
+                label Status:
+                    div#status
+                label FEN:
+                div#fen
+                label PGN:
+                div#pgn
+
+    script(src="./js/agent_controller.js")
+
+

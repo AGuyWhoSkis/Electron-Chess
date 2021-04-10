@@ -1,0 +1,29 @@
+{
+  "name": "electron-chess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "standard lib/chessboard.js && node scripts/build.js",
+    "standard": "standard --fix lib/*.js website/js/*.js",
+    "website": "node scripts/website.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.2",
+    "csso": "3.5.1",
+    "fs-plus": "3.1.1",
+    "kidif": "1.1.0",
+    "mustache": "2.3.0",
+    "standard": "10.0.2",
+    "uglify-js": "3.6.0"
+  },
+  "dependencies": {
+    "chess.js": "^0.11.0",
+    "jquery": "^3.6.0",
+    "pug": "^3.0.2"
+  }
+}
